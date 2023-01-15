@@ -18,12 +18,12 @@ public class Sample implements Serializable {
         this.id = id;
     }
 
-    public int getNumbername() {
+    public String getNumbername() {
         return numbername;
         //CODENAME FOR SAMPLE( ******,01-10 BRIGADE NUMB+01-20 AREA NUMB+01-99 SERIAL NUMBER)
     }
 
-    public void setNumbername(int numbername) {
+    public void setNumbername(String numbername) {
         this.numbername = numbername;
     }
 
