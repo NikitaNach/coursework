@@ -3,8 +3,9 @@ package ru.studwork.project.data;
 import java.io.Serializable;
 
 
-public class sample implements Serializable {
+public class Sample implements Serializable {
     private String id;
+    private int numbername;
     private String texture;
     private String structure;
     private String composition;
@@ -15,6 +16,15 @@ public class sample implements Serializable {
     }
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int getNumbername() {
+        return numbername;
+        //CODENAME FOR SAMPLE( ******,01-10 BRIGADE NUMB+01-20 AREA NUMB+01-99 SERIAL NUMBER)
+    }
+
+    public void setNumbername(int numbername) {
+        this.numbername = numbername;
     }
 
     public String getTexture() {
@@ -44,9 +54,8 @@ public class sample implements Serializable {
         return paleo;
     }
 
-    public void setPaleoaleo(String paleo) {
+    public void setPaleo(String paleo) {
         this.paleo = paleo;
     }
-
 }
 
