@@ -1,4 +1,4 @@
 package ru.studwork.project;
 //Начальник группы студентов
-public class groupDirector extends User{
+public class GroupDirector extends User{
 }
