@@ -1,4 +1,4 @@
-package ru.studwork.project.api.data;
+package ru.studwork.project.data;
 
 import java.io.Serializable;
 

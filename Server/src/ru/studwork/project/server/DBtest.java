@@ -1,6 +1,5 @@
 package ru.studwork.project.server;
 
-import ru.studwork.project.api.data.sample;
 
 import java.sql.*;
 import java.util.ArrayList;

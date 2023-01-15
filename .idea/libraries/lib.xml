@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Server/lib/postgresql-42.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Server/lib/jakarta.servlet-api-6.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Server/lib/hessian-4.0.60.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Server/lib/javax.servlet-api-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
