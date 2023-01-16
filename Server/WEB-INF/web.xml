@@ -1,19 +1,19 @@
 <web-app>
     <servlet>
-        <servlet-name>product</servlet-name>
+        <servlet-name>sample</servlet-name>
         <servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
         <init-param>
             <param-name>home-class</param-name>
-            <param-value>ru.studwork.project.server.ProductServiceImpl</param-value>
+            <param-value>ru.studwork.project.server.SampleServiceimp</param-value>
         </init-param>
         <init-param>
             <param-name>home-api</param-name>
-            <param-value>ru.studwork.project.api.services.ProductService</param-value>
+            <param-value>ru.studwork.project.services.SampleService</param-value>
         </init-param>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>product</servlet-name>
-        <url-pattern>/product</url-pattern>
+        <servlet-name>sample</servlet-name>
+        <url-pattern>/sample</url-pattern>
     </servlet-mapping>
 </web-app>
