@@ -3,7 +3,6 @@ package ru.studwork.project.server;
 import ru.studwork.project.data.Sample;
 import ru.studwork.project.services.SampleService;
 
-import javax.management.RuntimeErrorException;
 import java.sql.*;
 import java.util.List;
 import java.util.UUID;
@@ -15,13 +14,13 @@ public class SampleServiceimp implements SampleService {
     @Override
     public String addSample(Sample sample){
         try{
-            Class.forName("org.postgresql.Driver")
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e){
             throw new RuntimeException(e);
         }
         try{
             String id = UUID.randomUUID().toString();
-            Sample.setId(id);
+            sample.setId(id);
             Connection conn=DriverManager.getConnection(url,login,password);
             Statement statement=conn.createStatement();
             String sql="INSERT INTO samples(id,Sam_numbername,Sam_texture,Sam_structure,Sam_composition,Sam_paleo) VALUES(\'" + sample.getId() + "\', \'" + sample.getNumbername() + "\',\'" + sample.getTexture() +"\',\'"+ sample.getStructure() +"\',\'" + sample.getComposition() +"\',\'" + sample.getPaleo() +"\')";
@@ -33,8 +32,22 @@ public class SampleServiceimp implements SampleService {
             throw new RuntimeException(e);
         }
     }
+
     @Override
-    public void delSample(String id){
+    public void delSample(String id) {
+        try {
+            Connection conn = DriverManager.getConnection(url, login, password);
+            Statement statement = conn.createStatement();
+            String sql = "DELETE FROM samples WHERE id='" + id + "'";
+            statement.execute(sql);
+            statement.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @Override
+    public Sample getSample(String id){
         try {
             Connection conn = DriverManager.getConnection(url, login, password);
             Statement statement = conn.createStatement();
@@ -50,7 +63,7 @@ public class SampleServiceimp implements SampleService {
             conn.close();
             return sample;
         } catch(SQLException e){
-            throw new RuntimeErrorException(e);
+            throw new RuntimeException(e);
         }
     }
     @Override

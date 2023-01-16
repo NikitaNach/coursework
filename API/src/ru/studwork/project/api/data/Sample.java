@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class Sample implements Serializable {
     private String id;
-    private int numbername;
+    private String numbername;
     private String texture;
     private String structure;
     private String composition;
